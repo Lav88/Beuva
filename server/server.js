@@ -8,6 +8,8 @@ const dotenv = require("dotenv");
 //Models
 const User = require('./models/user');
 const Product = require('./models/product');
+const Owner = require('./models/owner');
+
 
 
 dotenv.config();
@@ -32,7 +34,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //REQUIRE API's
 const productRoutes = require('./routes/product');
+const categoryRoutes = require('./routes/category');
+const ownerRoutes = require('./routes/owner');
+const subcategoryRoutes = require('./routes/subCategory');
+
 app.use("/api", productRoutes);
+app.use("/api", categoryRoutes);
+app.use("/api", ownerRoutes);
+app.use("/api", subcategoryRoutes);
 
 
 //PORT location 
