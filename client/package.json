@@ -1,0 +1,29 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/fontawesome": "^1.1.2",
+    "@nuxtjs/pwa": "^3.3.5",
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.9.1",
+    "nuxt": "^2.15.3",
+    "nuxt-fontawesome": "^0.4.0",
+    "slick-carousel": "^1.8.1",
+    "slick-vuejs": "^1.0.9",
+    "vue-admire-photoswipe": "^1.2.0"
+  },
+  "devDependencies": {}
+}

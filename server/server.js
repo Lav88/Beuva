@@ -21,11 +21,12 @@ mongoose.connect(
     { useNewUrlParser: true, useUnifiedTopology: true  },
     err => {
         if(err){
-            console.log('Server connectio error');
+            console.log('Server connection error');
         } else {
             console.log('Server connected');
     }
 });
+
 //Middlewares
 app.use(morgan('dev'));
 //needed to parser data from frontend 
