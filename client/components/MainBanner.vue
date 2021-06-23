@@ -8,7 +8,7 @@
                         <div class="collection-grid-item">
                             <a href="#" class="overlay"></a>
                             <div class="img">
-                                <img class="blur-up lazyload" data-src="../static/images/100x100.jpg" src="../static/images/100x100.jpg" alt="" title=" " />
+                                <img class="blur-up lazyload" data-src="../static/images/100x100.jpg" alt="" title=" " />
                             </div>
                             <div class="details center wd-70">
                                 <div class="inner">
@@ -23,7 +23,7 @@
                         <div class="collection-grid-item">
                             <a href="#" class="overlay"></a>
                             <div class="img">
-                                <img class="blur-up lazyload" data-src="assets/images/collection-banner/577x649.jpg" src="../static/images/100x100.jpg" alt="" title=" " />
+                                <img class="blur-up lazyload" data-src="../static/images/100x100.jpg"  alt="" title=" " />
                             </div>
                             <div class="details center wd-70">
                                 <div class="inner">
@@ -38,7 +38,7 @@
                         <div class="collection-grid-item">
                             <a href="#" class="overlay"></a>
                             <div class="img">
-                                <img class="blur-up lazyload" data-src="assets/images/collection-banner/demo17-collection-bnr1.jpg" src="../static/images/100x100.jpg" alt="" title=" " />
+                                <img class="blur-up lazyload" data-src="../static/images/100x100.jpg" alt="" title=" " />
                             </div>
                             <div class="details center wd-70">
                                 <div class="inner">

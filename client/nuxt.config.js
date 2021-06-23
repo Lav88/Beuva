@@ -64,6 +64,16 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    //nuxt-lazy-load
+    ['nuxt-lazy-load',{
+      // These are the default values
+      images: true,
+      videos: true,
+  
+      // To remove class set value to false
+      loadingClass: 'isLoading',
+      loadedClass: 'isLoaded',
+      appendClass: 'lazyLoad'}]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

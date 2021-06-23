@@ -2,7 +2,19 @@
     <main>
         <!-- Breadcrumbs -->
         <div id="page-content">
-            <Breadcrumbs />
+            <!--Breadcrumbs-->
+        <div class="breadcrumbs-wrapper">
+        	<div class="container">
+            	<div class="breadcrumbs">
+                    <a href="index.html" title="Back to the home page">Home</a> 
+                    <span aria-hidden="true">|</span> 
+                    <a href="index.html" title="Back to the home page"> {{ product.category.type }}</a> 
+                    <span aria-hidden="true">|</span> 
+                    <span>{{ product.title }}</span>
+                </div>
+            </div>
+        </div>
+        <!--End Breadcrumbs-->
             <!--PRODUCT BODY CONTAINER-->
             <div class="container">
                 <div class="product-detail-container">
@@ -12,44 +24,41 @@
                                     <div class="product-details-img">
                                         <div class="product-thumb">
                                             <div id="gallery" class="product-dec-slider-2 product-tab-left">
-                                                <a data-image="assets/images/product-images/product-detail1.jpg" data-zoom-image="assets/images/product-images/product-detail1.jpg" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
-                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="" />
+                                                <a :data-image="product.photo" data-zoom-image="assets/images/product-images/product-detail1.jpg" class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" tabindex="-1">
+                                                    <img class="blur-up" :data-src="product.photo" alt="" />
                                                 </a>
-                                                <a data-image="assets/images/product-images/product-detail1.jpg" data-zoom-image="assets/images/product-images/product-detail1.jpg" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1">
-                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="" />
+                                                
+                                                <a :data-image="product.photo" data-zoom-image="" class="slick-slide slick-cloned" data-slick-index="-3" aria-hidden="true" tabindex="-1">
+                                                    <img class="blur-up" :data-src="product.photo"  alt="" v-lazy-load />
                                                 </a>
+                                                <!--
                                                 <a data-image="assets/images/product-images/product-detail1.jpg" data-zoom-image="assets/images/product-images/product-detail1.jpg" class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1">
-                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="" />
+                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" :src="product.photo" alt="" v-lazy-load />
                                                 </a>
                                                 <a data-image="assets/images/product-images/product-detail1.jpg" data-zoom-image="assets/images/product-images/product-detail1.jpg" class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1">
-                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="" />
+                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" :src="product.photo" alt="" v-lazy-load />
                                                 </a>
                                                 <a data-image="assets/images/product-images/product-detail1.jpg" data-zoom-image="assets/images/product-images/product-detail1.jpg" class="slick-slide slick-cloned" data-slick-index="0" aria-hidden="true" tabindex="-1">
-                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="" />
+                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" :src="product.photo" alt="" v-lazy-load />
                                                 </a>
                                                 <a data-image="assets/images/product-images/product-detail1.jpg" data-zoom-image="assets/images/product-images/product-detail1.jpg" class="slick-slide slick-cloned" data-slick-index="1" aria-hidden="true" tabindex="-1">
-                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="" />
+                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" :src="product.photo" alt="" v-lazy-load />
                                                 </a>
                                                 <a data-image="assets/images/product-images/product-detail1.jpg" data-zoom-image="assets/images/product-images/product-detail1.jpg" class="slick-slide slick-cloned" data-slick-index="2" aria-hidden="true" tabindex="-1">
-                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="" />
+                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" :src="product.photo" alt="" v-lazy-load />
                                                 </a>
                                                 <a data-image="assets/images/product-images/product-detail1.jpg" data-zoom-image="assets/images/product-images/product-detail1.jpg" class="slick-slide slick-cloned" data-slick-index="3" aria-hidden="true" tabindex="-1">
-                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="" />
+                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" :src="product.photo" alt="" v-lazy-load />
                                                 </a>
                                                 <a data-image="assets/images/product-images/product-detail1.jpg" data-zoom-image="assets/images/product-images/product-detail1.jpg" class="slick-slide slick-cloned" data-slick-index="4" aria-hidden="true" tabindex="-1">
-                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="" />
+                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" :src="product.photo" alt="" v-lazy-load />
                                                 </a>
-                                                <a data-image="assets/images/product-images/product-detail1.jpg" data-zoom-image="assets/images/product-images/product-detail1.jpg" class="slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" tabindex="-1">
-                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="" />
-                                                </a>
-                                                <a data-image="assets/images/product-images/product-detail1.jpg" data-zoom-image="assets/images/product-images/product-detail1.jpg" class="slick-slide slick-cloned" data-slick-index="6" aria-hidden="true" tabindex="-1">
-                                                    <img class="blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="" />
-                                                </a>
+                                                -->
                                             </div>
                                         </div>
                                         <div class="zoompro-wrap product-zoom-right pl-20">
                                             <div class="zoompro-span">
-                                                <img id="zoompro" class="zoompro" src="assets/images/product-images/product-detail1.jpg" data-zoom-image="assets/images/product-images/product-detail1.jpg" alt="" />
+                                                <img id="zoompro" class="zoompro" :src="product.photo" data-zoom-image="../../static/images/80x80.jpg" alt="" />
                                             </div>
                                             <div class="product-labels"><span class="lbl pr-label1">new</span></div>
                                             <div class="product-buttons">
@@ -64,18 +73,19 @@
                                             </div>
                                         </div>
                                         <div class="lightboximages">
-                                            <a href="assets/images/product-images/product-detail1.jpg" data-size="1000x1280"></a>
-                                            <a href="assets/images/product-images/product-detail1.jpg" data-size="1000x1280"></a>
-                                            <a href="assets/images/product-images/product-detail1.jpg" data-size="1000x1280"></a>
-                                            <a href="assets/images/product-images/product-detail1.jpg" data-size="1000x1280"></a>
-                                            <a href="assets/images/product-images/product-detail1.jpg" data-size="1000x1280"></a>
-                                            <a href="assets/images/product-images/product-detail1.jpg" data-size="1000x1280"></a>
-                                            <a href="assets/images/product-images/product-detail1.jpg" data-size="1000x1280"></a>
-                                            <a href="assets/images/product-images/product-detail1.jpg" data-size="1000x1280"></a>
-                                            <a href="assets/images/product-images/product-detail1.jpg" data-size="1000x1280"></a>
-                                            <a href="assets/images/product-images/product-detail1.jpg" data-size="1000x1280"></a>
-                                            <a href="assets/images/product-images/product-detail1.jpg" data-size="1000x1280"></a>
+                                            <a href="../../static/images/80x80.jpg" data-size="1000x1280"></a>
+                                            <a href="../../static/images/80x80.jpg" data-size="1000x1280"></a>
+                                            <a href="../../static/images/80x80.jpg" data-size="1000x1280"></a>
+                                            <a href="../../static/images/80x80.jpg" data-size="1000x1280"></a>
+                                            <a href="../../static/images/80x80.jpg" data-size="1000x1280"></a>
+                                            <a href="../../static/images/80x80.jpg" data-size="1000x1280"></a>
+                                            <a href="../../static/images/80x80.jpg" data-size="1000x1280"></a>
+                                            <a href="../../static/images/80x80.jpg" data-size="1000x1280"></a>
+                                            <a href="../../static/images/80x80.jpg" data-size="1000x1280"></a>
+                                            <a href="../../static/images/80x80.jpg" data-size="1000x1280"></a>
+                                            <a href="../../static/images/80x80.jpg" data-size="1000x1280"></a>
                                         </div>
+                                        <!--SOCIAL SHARE ICONS-->
                                         <div class="social-sharing">
                                             <span class="label">Share:</span>
                                             <a target="_blank" href="#" class="btn btn--small btn--secondary btn--share share-facebook" title="Share on Facebook">
@@ -94,31 +104,40 @@
                                                 <i class="fa fa-envelope" aria-hidden="true"></i> <span class="share-title" aria-hidden="true">Email</span>
                                             </a>
                                         </div>
+                                        <!--SOCIAL SHARE ICONS-->
                                     </div>
                                 </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="product-single__meta">
-                                    <h1 class="product-single__title">Prodcut 360 Degree View</h1>
+                                    <h1 class="product-single__title">{{ product.title }}</h1>
+                                    <!--BRAND NAME-->
+                                    <h1 class="product-single__title">{{ product.owner.name }}</h1>
+                                    <!--END BRAND NAME-->
                                     <div class="prInfoRow">
                                         <div class="product-review"><a class="reviewLink" href="#tab2"><i class="font-13 fa fa-star"></i><i class="font-13 fa fa-star"></i><i class="font-13 fa fa-star"></i><i class="font-13 fa fa-star-o"></i><i class="font-13 fa fa-star-o"></i><span class="spr-badge-caption">6 reviews</span></a></div>
                                         <div class="product-sku">SKU: <span class="variant-sku">19115-rdxs</span></div>
                                         <div class="product-stock"> <span class="instock ">In Stock</span> <span class="outstock hide">Unavailable</span> </div>
                                     </div>
+                                    <!--PRODUCT PRICE SECTION-->
                                     <p class="product-single__price product-single__price-product-template">
                                         <span class="visually-hidden">Regular price</span>
                                         <s id="ComparePrice-product-template"><span class="money">$600.00</span></s>
                                         <span class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
-                                            <span id="ProductPrice-product-template"><span class="money">$500.00</span></span>
+                                            <span id="ProductPrice-product-template"><span class="money">${{ product.price }}</span></span>
                                         </span>
                                     </p>
+                                    <!--END PRODUCT PRICE SECTION-->
                                     <div class="orderMsg" data-user="23" data-time="24">
                                         <p><strong class="items">5</strong> sold in last <strong class="time">26</strong> hours</p>
                                     </div>
                                 </div>
+                                <!--PRODUCT DESCRIPTION-->
                                 <div class="product-single__description rte">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <p>{{ product.description}}</p>
                                 </div>
+                                <!--END PRODUCT DESCRIPTION-->
                                 <div id="quantity_message">Hurry! Only  <span class="items">4</span>  left in stock.</div>
+                                <!--PRODUCT SWATCHES-->
                                 <form method="post" action="/cart/add" id="product_form_10508262282" accept-charset="UTF-8" class="product-form product-form-product-template hidedropdown" enctype="multipart/form-data">
                                     <div class="swatch clearfix swatch-0 option1" data-option-index="0">
                                         <div class="product-form__item">
@@ -199,6 +218,7 @@
                                     </div>
                                     <!-- End Product Action -->
                                 </form>
+                                <!--PRODUCT SWATCHES-->
                                 <div class="trustseal-img"><img src="assets/images/checkout-cards.png" alt=""></div>
                                 <p id="freeShipMsg" class="freeShipMsg" data-price="199"><i class="fa fa-truck" aria-hidden="true"></i> Getting Closer! Only <b class="freeShip"><span class="money" data-currency-usd="$199.00" data-currency="USD">$199.00</span></b> Away From <b>FREE SHIPPING!</b></p>
                                 <p class="shippingMsg"><i class="fa fa-clock-o" aria-hidden="true"></i> Estimated Delivery Between <b id="fromDate">Wed. May 1</b> and <b id="toDate">Tue. May 7</b>.</p>
@@ -209,17 +229,18 @@
                         </div>
                     </div>
                 </div>
+                <hr/>
                 <!--Product Tabs-->
                 <div class="tabs-listing">
                     <ul class="product-tabs">
-                        <li rel="tab1" class="active"><a class="tablink">Product Details</a></li>
+                        <li rel="tab1" class="active"><a class="tablink">Product Specification</a></li>
                         <li rel="tab2"><a class="tablink">Reviews</a></li>
                         <li rel="tab3"><a class="tablink">Size Chart</a></li>
                         <li rel="tab4"><a class="tablink">Shipping &amp; Returns</a></li>
                         <li rel="tab5"><a class="tablink">Custom Tab</a></li>
                     </ul>
                     <div class="tab-container">
-                        <h3 class="tabs-ac-style active" rel="tab1">Product Details</h3>
+                        <h3 class="tabs-ac-style active" rel="tab1">Product Specification</h3>
                         <div id="tab1" class="tab-content">
                             <div class="product-description rte">
                                 <div class="row">
@@ -241,7 +262,7 @@
                                         <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
                                     </div>
                                     <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                                        <img data-src="assets/images/detail-img.jpg" src="assets/images/detail-img.jpg" alt="" />
+                                        <img data-src="assets/images/detail-img.jpg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -404,7 +425,7 @@
                     </div>
                 </div>
                 <!--End Product Tabs-->
-                
+
                 <!--Related Product Slider-->
                 <div class="related-product grid-products">
                     <div class="section-header">
@@ -418,10 +439,10 @@
                                 <!-- start product image -->
                                 <a href="product-layout1.html" class="product-img">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="image" title="product">
+                                    <img class="primary blur-up" data-src="assets/images/product-images/product-detail1.jpg" alt="image" title="product">
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="image" title="product">
+                                    <img class="hover blur-up" data-src="" alt="image" title="product">
                                     <!-- End hover image -->
                                     <!-- product label -->
                                     <div class="product-labels rectangular"><span class="lbl pr-label1">new</span></div>
@@ -503,10 +524,10 @@
                                 <!-- start product image -->
                                 <a href="product-layout1.html" class="product-img">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="image" title="product">
+                                    <img class="primary blur-up" data-src="" alt="image" title="product">
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/product-detail1.jpg" src="assets/images/product-images/product-detail1.jpg" alt="image" title="product">
+                                    <img class="hover blur-up" data-src="" alt="image" title="product">
                                     <!-- End hover image -->
                                 </a>
                                 <!-- end product image -->
@@ -586,10 +607,9 @@
                                 <!-- start product image -->
                                 <a href="product-layout1.html" class="product-img">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
-                                    <!-- End image -->
+                                    <img class="primary blur-up" data-src="" alt="image"  />
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
+                                    <img class="hover blur-up" data-src="" alt="image">
                                     <!-- End hover image -->
                                     <!-- product label -->
                                     <div class="product-labels rectangular"><span class="lbl pr-label2">Hot</span></div>
@@ -673,10 +693,10 @@
                                 <!-- start product image -->
                                 <a href="product-layout1.html" class="product-img">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image"/>
+                                    <img class="primary blur-up" data-src=""  alt="image"  />
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" />
+                                    <img class="hover blur-up" data-src=""   />
                                     <!-- End hover image -->
                                 </a>
                                 <!-- end product image -->
@@ -758,10 +778,10 @@
                                 <!-- start product image -->
                                 <a href="product-layout1.html" class="product-img">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image"/>
+                                    <img class="primary blur-up" data-src="" alt="image"  />
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image" />
+                                    <img class="hover blur-up" data-src="" alt="image"  />
                                     <!-- End hover image -->
                                     <!-- product label -->
                                     <div class="product-labels"><span class="lbl on-sale">Sale</span></div>
@@ -845,10 +865,10 @@
                                 <!-- start product image -->
                                 <a href="product-layout1.html" class="product-img">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
+                                    <img class="primary blur-up" :data-src="product.photo"  alt="image">
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
+                                    <img class="hover blur-up" data-src=""  alt="image">
                                     <!-- End hover image -->
                                 </a>
                                 <!-- end product image -->
@@ -929,10 +949,10 @@
                                 <!-- start product image -->
                                 <a href="product-layout1.html" class="product-img">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
+                                    <img class="primary blur-up" data-src="" alt="image">
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
+                                    <img class="hover blur-up" data-src="" alt="image">
                                     <!-- End hover image -->
                                 </a>
                                 <!-- end product image -->
@@ -1012,207 +1032,207 @@
 
                 <!--Recently Product Slider-->
                 <div class="related-product grid-products">
-                        <div class="section-header">
-                            <h2 class="section-header__title text-center h2"><span>Recently Viewed Product</span></h2>
-                            <p class="sub-heading">You can manage this section from store admin as describe in above section</p>
-                        </div>
-                        <div class="productPageSlider">
-                            <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="product-layout1.html" class="product-img">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image" title="product">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image" title="product">
-                                        <!-- End hover image -->
-                                    </a>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="product-layout1.html">Backpack With Contrast Bow</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$399.01</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="product-layout1.html" class="product-img">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
-                                        <!-- End hover image -->
-                                    </a>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="product-layout1.html">Button Up Top Black</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$748.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="product-layout1.html" class="product-img">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
-                                        <!-- End hover image -->
-                                    </a>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="#">Martha Knit Top</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$550.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="product-layout1.html" class="product-img">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image"/>
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image" />
-                                        <!-- End hover image -->
-                                    </a>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="product-layout1.html">Toledo Mules shoes</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="old-price">$900.00</span>
-                                        <span class="price">$788.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="product-layout1.html" class="product-img">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image"/>
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image" />
-                                        <!-- End hover image -->
-                                    </a>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="product-layout1.html">Zipper Jacket</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$550.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-12 item">
-                                <!-- start product image -->
-                                <div class="product-image">
-                                    <!-- start product image -->
-                                    <a href="product-layout1.html" class="product-img">
-                                        <!-- image -->
-                                        <img class="primary blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
-                                        <!-- End image -->
-                                        <!-- Hover image -->
-                                        <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
-                                        <!-- End hover image -->
-                                    </a>
-                                    <!-- end product image -->
-                                </div>
-                                <!-- end product image -->
-
-                                <!--start product details -->
-                                <div class="product-details text-center">
-                                    <!-- product name -->
-                                    <div class="product-name">
-                                        <a href="product-layout1.html">Sunset Sleep Scarf Top</a>
-                                    </div>
-                                    <!-- End product name -->
-                                    <!-- product price -->
-                                    <div class="product-price">
-                                        <span class="price">$788.00</span>
-                                    </div>
-                                    <!-- End product price -->
-                                </div>
-                                <!-- End product details -->
-                            </div>
-                            <div class="col-12 item">
+                    <div class="section-header">
+                        <h2 class="section-header__title text-center h2"><span>Recently Viewed Product</span></h2>
+                        <p class="sub-heading">You can manage this section from store admin as describe in above section</p>
+                    </div>
+                    <div class="productPageSlider">
+                        <div class="col-12 item">
                             <!-- start product image -->
                             <div class="product-image">
                                 <!-- start product image -->
                                 <a href="product-layout1.html" class="product-img">
                                     <!-- image -->
-                                    <img class="primary blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
+                                    <img class="primary blur-up" data-src="" alt="image" title="product">
                                     <!-- End image -->
                                     <!-- Hover image -->
-                                    <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="assets/images/product-images/product1.jpg" alt="image">
+                                    <img class="hover blur-up" data-src="" alt="image" title="product">
+                                    <!-- End hover image -->
+                                </a>
+                                <!-- end product image -->
+                            </div>
+                            <!-- end product image -->
+                            <!--start product details -->
+                            <div class="product-details text-center">
+                                <!-- product name -->
+                                <div class="product-name">
+                                    <a href="product-layout1.html">Backpack With Contrast Bow</a>
+                                </div>
+                                <!-- End product name -->
+                                <!-- product price -->
+                                <div class="product-price">
+                                    <span class="price">$399.01</span>
+                                </div>
+                                <!-- End product price -->
+                            </div>
+                            <!-- End product details -->
+                        </div>
+                        <div class="col-12 item">
+                            <!-- start product image -->
+                            <div class="product-image">
+                                <!-- start product image -->
+                                <a href="product-layout1.html" class="product-img">
+                                    <!-- image -->
+                                    <img class="primary blur-up" data-src="" alt="image">
+                                    <!-- End image -->
+                                    <!-- Hover image -->
+                                    <img class="hover blur-up" data-src="" alt="image">
+                                    <!-- End hover image -->
+                                </a>
+                                <!-- end product image -->
+                            </div>
+                            <!-- end product image -->
+
+                            <!--start product details -->
+                            <div class="product-details text-center">
+                                <!-- product name -->
+                                <div class="product-name">
+                                    <a href="product-layout1.html">Button Up Top Black</a>
+                                </div>
+                                <!-- End product name -->
+                                <!-- product price -->
+                                <div class="product-price">
+                                    <span class="price">$748.00</span>
+                                </div>
+                                <!-- End product price -->
+                            </div>
+                            <!-- End product details -->
+                        </div>
+                        <div class="col-12 item">
+                            <!-- start product image -->
+                            <div class="product-image">
+                                <!-- start product image -->
+                                <a href="product-layout1.html" class="product-img">
+                                    <!-- image -->
+                                    <img class="primary blur-up" data-src=""  alt="image">
+                                    <!-- End image -->
+                                    <!-- Hover image -->
+                                    <img class="hover blur-up" data-src="" alt="image">
+                                    <!-- End hover image -->
+                                </a>
+                                <!-- end product image -->
+                            </div>
+                            <!-- end product image -->
+
+                            <!--start product details -->
+                            <div class="product-details text-center">
+                                <!-- product name -->
+                                <div class="product-name">
+                                    <a href="#">Martha Knit Top</a>
+                                </div>
+                                <!-- End product name -->
+                                <!-- product price -->
+                                <div class="product-price">
+                                    <span class="price">$550.00</span>
+                                </div>
+                                <!-- End product price -->
+                            </div>
+                            <!-- End product details -->
+                        </div>
+                        <div class="col-12 item">
+                            <!-- start product image -->
+                            <div class="product-image">
+                                <!-- start product image -->
+                                <a href="product-layout1.html" class="product-img">
+                                    <!-- image -->
+                                    <img class="primary blur-up" data-src="assets/images/product-images/product1.jpg" alt="image"/>
+                                    <!-- End image -->
+                                    <!-- Hover image -->
+                                    <img class="hover blur-up" data-src="assets/images/product-images/product1.jpg" alt="image" />
+                                    <!-- End hover image -->
+                                </a>
+                                <!-- end product image -->
+                            </div>
+                            <!-- end product image -->
+
+                            <!--start product details -->
+                            <div class="product-details text-center">
+                                <!-- product name -->
+                                <div class="product-name">
+                                    <a href="product-layout1.html">Toledo Mules shoes</a>
+                                </div>
+                                <!-- End product name -->
+                                <!-- product price -->
+                                <div class="product-price">
+                                    <span class="old-price">$900.00</span>
+                                    <span class="price">$788.00</span>
+                                </div>
+                                <!-- End product price -->
+                            </div>
+                            <!-- End product details -->
+                        </div>
+                        <div class="col-12 item">
+                            <!-- start product image -->
+                            <div class="product-image">
+                                <!-- start product image -->
+                                <a href="product-layout1.html" class="product-img">
+                                    <!-- image -->
+                                    <img class="primary blur-up" data-src="assets/images/product-images/product1.jpg" alt="image"/>
+                                    <!-- End image -->
+                                    <!-- Hover image -->
+                                    <img class="hover blur-up" data-src="assets/images/product-images/product1.jpg" alt="image" />
+                                    <!-- End hover image -->
+                                </a>
+                                <!-- end product image -->
+                            </div>
+                            <!-- end product image -->
+
+                            <!--start product details -->
+                            <div class="product-details text-center">
+                                <!-- product name -->
+                                <div class="product-name">
+                                    <a href="product-layout1.html">Zipper Jacket</a>
+                                </div>
+                                <!-- End product name -->
+                                <!-- product price -->
+                                <div class="product-price">
+                                    <span class="price">$550.00</span>
+                                </div>
+                                <!-- End product price -->
+                            </div>
+                            <!-- End product details -->
+                        </div>
+                        <div class="col-12 item">
+                            <!-- start product image -->
+                            <div class="product-image">
+                                <!-- start product image -->
+                                <a href="product-layout1.html" class="product-img">
+                                    <!-- image -->
+                                    <img class="primary blur-up" data-src="assets/images/product-images/product1.jpg" alt="image">
+                                    <!-- End image -->
+                                    <!-- Hover image -->
+                                    <img class="hover blur-up" data-src="assets/images/product-images/product1.jpg" alt="image">
+                                    <!-- End hover image -->
+                                </a>
+                                <!-- end product image -->
+                            </div>
+                            <!-- end product image -->
+
+                            <!--start product details -->
+                            <div class="product-details text-center">
+                                <!-- product name -->
+                                <div class="product-name">
+                                    <a href="product-layout1.html">Sunset Sleep Scarf Top</a>
+                                </div>
+                                <!-- End product name -->
+                                <!-- product price -->
+                                <div class="product-price">
+                                    <span class="price">$788.00</span>
+                                </div>
+                                <!-- End product price -->
+                            </div>
+                            <!-- End product details -->
+                        </div>
+                        <div class="col-12 item">
+                            <!-- start product image -->
+                            <div class="product-image">
+                                <!-- start product image -->
+                                <a href="product-layout1.html" class="product-img">
+                                    <!-- image -->
+                                    <img class="primary blur-up" data-src="assets/images/product-images/product1.jpg" alt="image">
+                                    <!-- End image -->
+                                    <!-- Hover image -->
+                                    <img class="hover blur-up" data-src="assets/images/product-images/product1.jpg" alt="image">
                                     <!-- End hover image -->
                                 </a>
                                 <!-- end product image -->
@@ -1233,21 +1253,33 @@
                             </div>
                             <!-- End product details -->
                         </div>
-                        </div>
                     </div>
+                </div>
                 <!--End Recently Product Slider-->
-                
-            </div><!--End Body Container-->
+            <!--End Body Container-->
+            </div>
         </div>
-        
     </main>
 </template>
 <script>
-import Breadcrumbs from "~/components/Breadcrumbs";
+//import Breadcrumbs from "~/components/Breadcrumbs.vue";
 export default {
-    componants: {
-        Breadcrumbs
+    async asyncData({ $axios, params }) {
+    try {
+      let response = await $axios.$get(`/api/products/${params.id}`);
+
+      console.log(response);
+
+      return {
+        product: response.product
+      };
+
+      
+    } catch(err) {
+      console.log(err);
     }
+  }
+  //
 };
 
 </script>

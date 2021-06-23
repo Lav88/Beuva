@@ -86,10 +86,10 @@
                                                     </ul>
                                                     <ul class="grid mm-Banners">
                                                         <li class="grid__item large-up--one-half imageCol">
-                                                            <a href="#"><img class="lazyload" src="assets/images/megamenu-banner7.jpg" data-src="assets/images/megamenu-banner7.jpg" alt=""></a>
+                                                            <a href="#"><img class="lazyload" data-src="assets/images/megamenu-banner7.jpg" alt=""></a>
                                                         </li>
                                                         <li class="grid__item large-up--one-half imageCol">
-                                                            <a href="#"><img class="lazyload" src="assets/images/megamenu-banner8.jpg" data-src="assets/images/megamenu-banner8.jpg" alt=""></a>
+                                                            <a href="#"><img class="lazyload" data-src="assets/images/megamenu-banner7.jpg" alt=""></a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -475,13 +475,13 @@
                                             </ul>
                                             <div class="row clear">
                                                 <div class="col-md-4 col-lg-4">
-                                                    <a href="#;"><img src="assets/images/megamenu-banner4.jpg" data-src="assets/images/megamenu-banner4.jpg" alt=""/></a>
+                                                    <a href="#;"><img data-src="assets/images/megamenu-banner4.jpg" alt=""/></a>
                                                 </div>
                                                 <div class="col-md-4 col-lg-4">
-                                                    <a href="#;"><img src="assets/images/megamenu-banner4.jpg" data-src="assets/images/megamenu-banner4.jpg" alt=""/></a>
+                                                    <a href="#;"><img data-src="assets/images/megamenu-banner4.jpg" alt=""/></a>
                                                 </div>
                                                 <div class="col-md-4 col-lg-4">
-                                                    <a href="#;"><img src="assets/images/megamenu-banner4.jpg" data-src="assets/images/megamenu-banner4.jpg" alt=""/></a>
+                                                    <a href="#;"><img data-src="assets/images/megamenu-banner4.jpg" alt=""/></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -526,13 +526,13 @@
                                             </ul>
                                             <div class="row clear">
                                                 <div class="col-md-4 col-lg-4">
-                                                    <a href="#;"><img src="assets/images/megamenu-banner4.jpg" data-src="assets/images/megamenu-banner4.jpg" alt=""/></a>
+                                                    <a href="#;"><img  data-src="assets/images/megamenu-banner4.jpg" alt=""/></a>
                                                 </div>
                                                 <div class="col-md-4 col-lg-4">
-                                                    <a href="#;"><img src="assets/images/megamenu-banner4.jpg" data-src="assets/images/megamenu-banner4.jpg" alt=""/></a>
+                                                    <a href="#;"><img data-src="assets/images/megamenu-banner4.jpg" alt=""/></a>
                                                 </div>
                                                 <div class="col-md-4 col-lg-4">
-                                                    <a href="#;"><img src="assets/images/megamenu-banner4.jpg" data-src="assets/images/megamenu-banner4.jpg" alt=""/></a>
+                                                    <a href="#;"><img data-src="assets/images/megamenu-banner4.jpg" alt=""/></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -792,7 +792,7 @@
 <script>
 import Search from "~/components/Search";
 export default {
-    componants: {
+    components: {
         Search
     }
 };

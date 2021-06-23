@@ -21,8 +21,11 @@
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
     "nuxt-fontawesome": "^0.4.0",
+    "nuxt-lazy-load": "^1.2.6",
     "slick-carousel": "^1.8.1",
     "slick-vuejs": "^1.0.9",
+    "three-sixty": "0.0.2",
+    "threesixfive-vue-library": "0.0.28",
     "vue-admire-photoswipe": "^1.2.0"
   },
   "devDependencies": {}

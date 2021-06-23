@@ -13,12 +13,13 @@
                         <!-- start product image -->
                         <a href="product-layout1.html" class="product-img">
                             <!-- image -->
-                            <img class="primary blur-up lazyload" 
-                            data-src="assets/images/product-images/product1.jpg" 
-                            :src="product.photo" alt="" title="" >
+                            <img class="primary blur-up" 
+                            :data-src="product.photo" 
+                            alt="" title="" 
+                            v-lazy-load>
                             <!-- End image -->
                             <!-- Hover image -->
-                            <img class="hover blur-up lazyload" data-src="assets/images/product-images/product1.jpg" src="" alt="" title="" >
+                            <img class="hover blur-up " data-src="assets/images/product-images/product1.jpg" alt="" title="" v-lazy-load>
                             <!-- End hover image -->
                             <!-- product label -->
                             <div class="product-labels"><span class="lbl on-sale">Sale</span></div>

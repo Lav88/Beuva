@@ -59,7 +59,7 @@ router.get("/products", async (req, res) => {
 //GET REQUEST - get a single product
 router.get("/products/:id", async (req, res) => { //pass peram :id to get single product
     try {
-        let product = await Product.findOne({ _id: req.params.id });
+        let product = await Product.findOne({ _id: req.params.id }).populate("owner category").exec();
         res.json({
             success: true,
             product: product
